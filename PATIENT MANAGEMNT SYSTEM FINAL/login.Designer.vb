@@ -30,6 +30,7 @@ Partial Class login
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.SHOW = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -102,12 +103,24 @@ Partial Class login
         Me.Button2.Text = "EXIT"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'SHOW
+        '
+        Me.SHOW.AutoSize = True
+        Me.SHOW.ForeColor = System.Drawing.Color.White
+        Me.SHOW.Location = New System.Drawing.Point(326, 129)
+        Me.SHOW.Name = "SHOW"
+        Me.SHOW.Size = New System.Drawing.Size(71, 20)
+        Me.SHOW.TabIndex = 8
+        Me.SHOW.Text = "SHOW"
+        Me.SHOW.UseVisualStyleBackColor = True
+        '
         'login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Navy
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.SHOW)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label3)
@@ -131,4 +144,5 @@ Partial Class login
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents SHOW As CheckBox
 End Class

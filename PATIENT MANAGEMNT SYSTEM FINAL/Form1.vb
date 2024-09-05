@@ -43,7 +43,7 @@ Public Class Form1
         conn.Open()
         Dim cmd As New OleDbCommand("select * from patient_registration Where Name = @Name", conn)
         cmd.Parameters.AddWithValue("Name", ComboBox1.SelectedValue)
-        Dim myreader As OleDbDataReader = cmd.ExecuteReader
+        Dim myreader As OleDbDataReader = cmd.ExecuteReader()
         If myreader.Read() Then
             Label1.Text = "PATIENT_ID" & myreader("PATIENT_ID").ToString & vbCrLf & vbCrLf &
                 "Name" & myreader("Name").ToString & vbCrLf & vbCrLf &

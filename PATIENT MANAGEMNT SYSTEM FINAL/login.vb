@@ -50,5 +50,18 @@ Public Class login
 
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         con.ConnectionString = dbprovider & dbsource
+        TextBox2.UseSystemPasswordChar = True
+    End Sub
+
+    Private Sub SHOW_CheckedChanged(sender As Object, e As EventArgs) Handles SHOW.CheckedChanged
+        If SHOW.Checked = True Then
+            TextBox2.UseSystemPasswordChar = False
+            SHOW.Text = "HIDE"
+
+        Else
+            TextBox2.UseSystemPasswordChar = True
+            SHOW.Text = "SHOW"
+
+        End If
     End Sub
 End Class
